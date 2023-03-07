@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+<head>
+  <meta charset="utf-8">
+  <title>Animated sign-up Form </title>
+ 
+</head>
+
+<body>
+  <div class="center">
+    <h1>Sign-up</h1>
+    <form method="post" action ="{% url 'signup' %}">
+      {% csrf_token %}
+      <div class="txt_field1">
+        <input type="text" name="username" required>
+        <span></span>
+        <label>username</label>
+      </div>
+
+      <div class="txt_field1">
+        <input type="number" name="mobilenumber" required>
+        <span></span>
+        <label>Mobile No</label>
+      </div>
+      <div class="txt_field2">
+        <input type="password" name="password" required>
+        <span></span>
+        <label>Password</label>
+      </div>
+
+      <div class="txt_field3">
+        <input type="text" name="confirmpassword" required>
+        <span></span>
+        <label>Confirm Password</label>
+      </div><div class="txt_field4">
+        <input type="text" name="fname" required>
+        <span></span>
+        <label>First Name</label>
+      </div><div class="txt_field5">
+        <input type="text" name="lname" required>
+        <span></span>
+        <label>Last Name</label>
+      </div><div class="txt_field6">
+        <input type="date" name="dob" required>
+        <span></span>
+        <label>Date of Birth</label>
+      </div><div class="txt_field7">
+        <input type="email" name="email" required>
+        <span></span>
+        <label>E-Mail Id</label>
+      </div>
+
+      <input type="submit" value="Sign-Up">
+      
+    </form>
+  </div>
+
+</body>
+
+</html>
